@@ -1,5 +1,5 @@
 import React from 'react';
-import FormLine from '../FormLine/FormLine';
+import FormSectionContent from '../FormSectionContent/FormSectionContent';
 
 class FormSection extends React.Component{
   constructor(props) {
@@ -15,7 +15,7 @@ class FormSection extends React.Component{
   }
 
   render() {
-    const { title, line1, line2, detail } = this.props;
+    const { title, line1, line2, detail, handleChange } = this.props;
     
     return (
       <div className='formSection'>
@@ -35,17 +35,7 @@ class FormSection extends React.Component{
 
         { detail && this.state.detailOpen ? (
           <div className='formSectionBottom'>
-            <div className='sectionContent'>
-            {
-              detail.map((title, i) => {
-                return <FormLine
-                  key={title}
-                  name={`${title.toLowerCase()}${i}`}
-                  title={title}
-                  handleChange={e => { e.persist(); this.handleChange(e); }}
-                />
-              })}
-            </div>
+            <FormSectionContent detail={detail} handleChange={handleChange} />
           </div>
         ) : null }
 

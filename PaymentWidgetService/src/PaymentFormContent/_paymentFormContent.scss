@@ -10,24 +10,6 @@
     color: #444;
   }
 
-  .sectionContent {  
-    .formLine {
-      display: flex;
-      color: #888;
-      .formLineTitle {
-        font-weight: 600;
-      }
-      .formLineInput {
-        outline: none;
-        border: solid light-grey 2px;
-        padding-left: 0.5rem;
-      }
-      .formLineInput:focus {
-        border: solid $link-color 2px;
-      }
-    }
-  }
-
   .formSubmit {
     background-color: $base-color;
     width: 5rem;
@@ -37,7 +19,6 @@
     border: 0px solid white;
     color: $link-color;
     align-self: flex-end;
-    
   }
 
   .formSubmit:hover {
@@ -48,7 +29,6 @@
     color: white;
     font-weight: 600;
   }
-
 }
 
 // # Phone
