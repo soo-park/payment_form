@@ -1,7 +1,7 @@
 import React from 'react';
 import { debounce } from 'lodash';
 import FormSecton from '../FormSection/FormSection';
-import { paymentInfo, address, paymentSelection } from '../_MockData/paymentMockData';
+import { paymentSelection } from '../_MockData/paymentMockData';
 
 class PaymentFormContent extends React.Component {
   constructor(props) {
@@ -53,7 +53,7 @@ class PaymentFormContent extends React.Component {
   render() {
     return (
       <div className='paymentForm'>
-        <div className='sectionTitle'>Payment</div>
+        <div className='sectionTitle'>{this.icon ? this.icon : null}</div>
         {
           Object.keys(paymentSelection).map(x => 
             <FormSecton

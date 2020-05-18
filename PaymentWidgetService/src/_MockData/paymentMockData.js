@@ -1,7 +1,8 @@
 export const type = {
   'First Name': { type: 'input' },
   'Last Name': {type: 'input' },
-  'Payment Number':  { type: 'input' },
+  'Creditcard Number':  { type: 'input' },
+  'Security Code': {type: 'input'},
   'Line1':  { type: 'input' },
   'Line2':  { type: 'input' },
   'City':  { type: 'input' },
@@ -15,7 +16,8 @@ export const type = {
 export const paymentInfo = [
   'First Name',
   'Last Name',
-  'Payment Number',
+  'Creditcard Number',
+  'Security Code',
 ];
 
 export const address = [
