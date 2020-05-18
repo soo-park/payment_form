@@ -1,0 +1,42 @@
+.formLineInput {
+  border: none;
+  border-bottom: lightgrey solid 2px;
+  color: grey;
+  width: 100%;
+  overflow: auto;
+}
+
+// # Phone
+@media only screen and (max-width:320px) {
+  .formLineTitle, .formLineInput {
+    font-size: 1.5rem;
+  }
+  .formLine {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// # Tablet
+@media only screen and (min-width:321px) and (max-width:768px) {
+  .formLineTitle, .formLineInput {
+    font-size: 1.2rem;
+  }
+  .formLine {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+}
+
+// # Desktop
+@media only screen and (min-width:769px) {
+  .formLineTitle, .formLineInput {
+    font-size: 1rem;
+  }
+  .formLine {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+  }
+}

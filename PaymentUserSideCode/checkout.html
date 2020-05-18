@@ -1,0 +1,24 @@
+<!-- This file was given as a default starting point  -->
+<html>
+  <header>
+    <link rel="stylesheet" href="checkout.css">
+    <script src="checkout.js"></script>
+  </header>
+  <body>
+    <div id="payment-container"></div>
+    <script>
+      var initOptions = {
+          containerId: 'payment-container', // manditory
+          callbacks: {
+              onSuccess: function (result) {  // manditory
+                  console.log('Payment successful.', result);
+              },
+              onPaymentCancel : function (result) {  // manditory
+                  console.log('Payment cancel.', result);
+              }
+          }
+      };
+      window.payment.init(initOptions);
+    </script>
+  </body>
+</html>

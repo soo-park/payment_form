@@ -1,0 +1,56 @@
+.paymentForm {
+  text-align: left;
+
+  .sectionTitle {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-weight: 700;
+    color: #444;
+  }
+
+  .sectionContent {  
+    .formLine {
+      display: flex;
+      color: #888;
+      .formLineTitle {
+        width: 150px;
+        font-weight: 600;
+      }
+      .formLineInput {
+        border: solid light-grey 2px;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  .formSubmit {
+    background-color: grey;
+    width: 5rem;
+    height: 2rem;
+    color: white;
+    font-size: 1rem;
+    margin: 20px;
+    border: 0px solid white;
+  }
+}
+
+// # Phone
+@media only screen and (max-width:320px) {
+  .paymentForm > .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+// # Tablet
+@media only screen and (min-width:321px) and (max-width:768px) {
+  .paymentForm > .sectionTitle {
+    font-size: 1.2rem;
+  }
+}
+
+// # Desktop
+@media only screen and (min-width:769px) {
+  .paymentForm > .sectionTitle {
+    font-size: 1rem;
+  }
+}
