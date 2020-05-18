@@ -1,6 +1,5 @@
 .formLineInput {
-  border: none;
-  border-bottom: lightgrey solid 2px;
+  border: lightgrey solid 2px;
   color: grey;
   width: 100%;
   overflow: auto;
@@ -25,7 +24,7 @@
   .formLine {
     display: flex;
     flex-direction: column;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
   }
 }
 

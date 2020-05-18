@@ -29,7 +29,11 @@ class PaymentForm extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.onButtonClick.bind(this)}> Payment </button>
+        <button className='paymentButton' onClick={this.onButtonClick.bind(this)}>
+          <svg width="50" height="50" xmlns="./img/Apple_Pay_Mark_RGB_041619.svg">       
+            <image href="./img/Apple_Pay_Mark_RGB_041619.svg" height="50" width="50"></image>
+          </svg>
+        </button>
         { this.state.modalOpen ? 
           <div className='modal'>
             <div className='modal-content'>
