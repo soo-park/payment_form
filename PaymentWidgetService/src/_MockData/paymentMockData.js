@@ -1,16 +1,16 @@
-export const type = {
-  'First Name': { type: 'input' },
-  'Last Name': {type: 'input' },
-  'Creditcard Number':  { type: 'input' },
-  'Security Code': {type: 'input'},
-  'Line1':  { type: 'input' },
-  'Line2':  { type: 'input' },
-  'City':  { type: 'input' },
-  'State':  { type: 'input' }, 
-  'Zip':  { type: 'input' },
-  'Country':  { type: 'input' },
-  'EXPRESS SHIPPING': {type: 'radio'},
-  'STANDARD SHIPPING':  {type: 'radio'},
+export const formType = {
+  'First Name': { type: 'input', width: 4 },
+  'Last Name': {type: 'input', width: 4 },
+  'Creditcard Number':  { type: 'input', width: 6 },
+  'Security Code': {type: 'input', width: 2},
+  'Line1':  { type: 'input', width: 10 },
+  'Line2':  { type: 'input', width: 10},
+  'City':  { type: 'input', width: 4 },
+  'State':  { type: 'input', width: 2 }, 
+  'Zip':  { type: 'input', width: 4 },
+  'Country':  { type: 'input', width: 4 },
+  'EXPRESS SHIPPING': {type: 'radio', name: 'shipping', width: 4},
+  'STANDARD SHIPPING':  {type: 'radio', name: 'shipping', width: 4},
 }
 
 export const paymentInfo = [

@@ -13,7 +13,7 @@
       width: 100%;
       background-color: $base-color;
       padding-right: 0.5rem;
-      color: grey;
+      color: $base-dark;
       align-items: center;
     }
     
@@ -33,7 +33,7 @@
       height: auto;
       .paymentButton {
         background-color: none;
-        border: 0px solid white;
+        border: 0px solid $bright;
       }
     
       .paymentButton.apple {
@@ -43,7 +43,7 @@
       }
     
       .paymentButton.mock {
-        background-color: grey;
+        background-color: $base-dark;
         height: 1.9rem;
         width: 3.5rem;
         margin: 0.4rem 0rem 0.5rem 0.5rem;
@@ -75,7 +75,7 @@
 
     /* Modal Close Button */
     .close {
-      color: #aaa;
+      color: $base-dark;
       float: right;
       font-size: 2rem;
     font-weight: bold;
@@ -83,7 +83,7 @@
 
     .close:hover,
     .close:focus {
-      color: black;
+      color: $base-darker;
       text-decoration: none;
       cursor: pointer;
     }

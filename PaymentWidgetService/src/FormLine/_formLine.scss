@@ -1,6 +1,6 @@
 .formLineInput {
   border: $base-color solid 1px;
-  color: grey;
+  color: $base-dark;
   width: 100%;
   overflow: auto;
 }
@@ -8,7 +8,7 @@
 // # Phone
 @media only screen and (max-width:320px) {
   .formLineTitle, .formLineInput {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .formLine {
     display: flex;
@@ -31,7 +31,7 @@
 // # Desktop
 @media only screen and (min-width:769px) {
   .formLineTitle, .formLineInput {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .formLine {
     display: flex;

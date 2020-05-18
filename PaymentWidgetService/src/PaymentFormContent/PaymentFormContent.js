@@ -1,7 +1,7 @@
 import React from 'react';
 import { debounce } from 'lodash';
 import FormSecton from '../FormSection/FormSection';
-import { paymentSelection } from '../_MockData/paymentMockData';
+import { paymentSelection, invoice } from '../_MockData/paymentMockData';
 
 class PaymentFormContent extends React.Component {
   constructor(props) {
@@ -54,15 +54,33 @@ class PaymentFormContent extends React.Component {
     return (
       <div className='paymentForm'>
         <div className='sectionTitle'>{this.icon ? this.icon : null}</div>
-        {
-          Object.keys(paymentSelection).map(x => 
-            <FormSecton
-              key={x}
-              {...paymentSelection[x]}
-              handleChange={this.handleChange}
-            />
-          )
-        }
+        <div className='formSection'>
+
+          {
+            Object.keys(paymentSelection).map(x => 
+              <FormSecton
+                key={x}
+                {...paymentSelection[x]}
+                handleChange={this.handleChange}
+              />
+            )
+          }
+        </div>
+
+        <div className='invoice'>
+          {
+            Object.keys(invoice).map(x => 
+              <div key={x} className='invoiceItem'>
+                <div className='costType'>{x}</div>
+                <div className='costAmount'>{invoice[x]}</div>
+              </div>
+          )}
+          <div className='invoiceItem total'>
+            <div className='costType'>TOTAL</div>
+            <div className='costAmount'>$422.10</div>
+          </div>
+        </div>
+
         <button
           className='formSubmit'
           onClick={this.onSubmitHander}

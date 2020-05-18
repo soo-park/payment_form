@@ -1,5 +1,6 @@
 import React from 'react';
 import FormLine from '../FormLine/FormLine';
+import { formType } from '../_MockData/paymentMockData';
 
 class FormSectionContent extends React.Component{
   constructor(props) {
@@ -16,9 +17,11 @@ class FormSectionContent extends React.Component{
           detail.map((title, i) => {
             return <FormLine
               key={title}
-              name={`${title.toLowerCase()}${i}`}
+              name={formType[title]['name'] || `${title.toLowerCase()}${i}`}
               title={title}
               handleChange={e => { e.persist(); handleChange(e); }}
+              formType={formType[title]['type']}
+              formWidth={formType[title]['width']}
             />
           })}
       </div>

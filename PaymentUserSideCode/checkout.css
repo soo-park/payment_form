@@ -31,7 +31,7 @@ body {
 
 /* Modal Close Button */
 .close {
-  color: #aaa;
+  color: $base-dark;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -39,7 +39,7 @@ body {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: $base-darker;
   text-decoration: none;
   cursor: pointer;
 }

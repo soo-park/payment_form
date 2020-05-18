@@ -13,19 +13,32 @@ class FormLine extends React.Component{
   }
 
   render() {
-    const { title, placeholder, handleChange  } = this.props;
-    const name = title
-    
-    return (
-      <div className='formLine'>
-        <div className='formLineTitle'>{title}</div>
-        <input
-          name={name}
-          className='formLineInput'
-          placeholder={placeholder || ''}
-          onChange={handleChange}
-          ref={(input) => { this.nameInput = input; }} 
+    const { title, placeholder, handleChange, formType, formWidth, name  } = this.props;
+    // console.log(formType, formWidth);
+
+    let display = formType === 'input' ? (
+      <input
+        name={name}
+        className='formLineInput'
+        placeholder={placeholder || ''}
+        onChange={handleChange}
+        ref={(input) => { this.nameInput = input; }} 
+      />
+    ) : formType === 'radio' ? (
+      <input
+        type='radio'
+        name={name}
+        className='formLineInput'
+        placeholder={placeholder || ''}
+        onChange={handleChange}
+        ref={(input) => { this.nameInput = input; }} 
         />
+    ) : null;
+
+    return (
+      <div className={`formLine col-${formWidth}`} >
+        <div className='formLineTitle'>{title}</div>
+        {display}
       </div>
     );
   }

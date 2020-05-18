@@ -1,17 +1,55 @@
 .sectionContent {  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 1rem;
+  background-color: $base-light;
   .formLine {
     display: flex;
     color: #888;
+    margin: 0.5rem;
     .formLineTitle {
       font-weight: 600;
     }
     .formLineInput {
       outline: none;
-      border: solid light-grey 2px;
+      border: solid light-$base-dark 2px;
       padding-left: 0.5rem;
     }
     .formLineInput:focus {
       border: solid $link-color 2px;
+    }
+  }
+}
+
+
+// # Phone
+@media only screen and (max-width:320px) {
+
+}
+
+// # Tablet
+@media only screen and (min-width:321px) and (max-width:768px) {
+}
+
+// # Desktop
+@media only screen and (min-width:769px) {
+  .formLine.col-2 {
+    width: 20%;
+  }
+  .formLine.col-4 {
+    width: 40%;
+  }
+  .sectionContent {
+    .formLine.col-6 {
+      width: 60%;
+    }
+    .formLine.col-8 {
+      width: 80%;
+    }
+    .formLine.col-10 {
+      width: 100%;
     }
   }
 }
