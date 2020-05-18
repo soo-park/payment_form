@@ -23,26 +23,26 @@
         padding-left: 0.5rem;
       }
       .formLineInput:focus {
-        border: solid #0070c9 2px;
+        border: solid $link-color 2px;
       }
     }
   }
 
   .formSubmit {
-    background-color: lightgrey;
+    background-color: $base-color;
     width: 5rem;
     height: 2rem;
     font-size: 1rem;
     margin: 20px;
     border: 0px solid white;
-    color: #0070c9;
+    color: $link-color;
     align-self: flex-end;
     
   }
 
   .formSubmit:hover {
     cursor: pointer;
-    border: 2px solid #0070c9;
+    border: 2px solid $link-color;
     border-radius: 0.3rem;
     background-color: grey;
     color: white;
@@ -57,7 +57,7 @@
     font-size: 1.5rem;
   }
   .sectionContent > .formLine > .formLineTitle {
-        width: 150px;
+    width: 150px;
   }
 }
 

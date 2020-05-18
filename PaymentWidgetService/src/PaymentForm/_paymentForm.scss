@@ -1,8 +1,54 @@
 #payment-container {
-  padding: 1em;
-  .paymentButton {
-    background-color: none;
-    border: 0px solid white;
+  margin: 1em;
+
+  .fakeUserContainer {
+    display: flex;
+    flex-direction: column;
+
+    .fakeUserHeader,
+    .fakeUserContent,
+    .fakeUserPaymentSelectionBar {
+      margin: 0.5rem;
+      margin-right: 1rem;
+      width: 100%;
+      background-color: $base-color;
+      padding-right: 0.5rem;
+      color: grey;
+      align-items: center;
+    }
+    
+    .fakeUserHeader {
+      height: 3rem;
+      text-align: center;
+      padding-top: 1.5rem;
+    }
+
+    .fakeUserContent {
+      height: 8rem;
+      text-align: center;
+      padding-top: 7rem;
+    }
+
+    .fakeUserPaymentSelectionBar {
+      height: auto;
+      .paymentButton {
+        background-color: none;
+        border: 0px solid white;
+      }
+    
+      .paymentButton.apple {
+        text-align: left;
+        margin-top: 0.1rem;
+        background-color: transparent;
+      }
+    
+      .paymentButton.mock {
+        background-color: grey;
+        height: 1.9rem;
+        width: 3.5rem;
+        margin: 0.4rem 0rem 0.5rem 0.5rem;
+      }  
+    }
   }
 
   /* Modal Container */
@@ -16,36 +62,68 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
 
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    border-radius: 0.5rem;
-  }
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 1rem;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+      border-radius: 0.5rem;
+    }
 
-  /* Modal Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    /* Modal Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 2rem;
     font-weight: bold;
   }
 
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .paymentIframe {
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  .paymentIframe {
-    width: 100%;
-    height: 100%;
+  // # Phone
+  @media only screen and (max-width:320px) {
+    .fakeUserContainer {  
+      .fakeUserPaymentSelectionBar {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  // # Tablet
+  @media only screen and (min-width:321px) and (max-width:768px) {
+    .fakeUserContainer {  
+      .fakeUserPaymentSelectionBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  // # Desktop
+  @media only screen and (min-width:769px) {
+    .fakeUserContainer {  
+      .fakeUserPaymentSelectionBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
   }
 
 }

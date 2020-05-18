@@ -1,5 +1,7 @@
 import React from 'react';
 import PaymentFormContent from '../PaymentFormContent/PaymentFormContent';
+import logo from '../static/img/Apple_Pay_Mark_RGB_041619.svg';
+
 
 class PaymentForm extends React.Component {
   constructor(props) {
@@ -28,12 +30,18 @@ class PaymentForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <button className='paymentButton' onClick={this.onButtonClick.bind(this)}>
-          <svg width="50" height="50" xmlns="./img/Apple_Pay_Mark_RGB_041619.svg">       
-            <image href="./img/Apple_Pay_Mark_RGB_041619.svg" height="50" width="50"></image>
-          </svg>
-        </button>
+      <div className='fakeUserContainer'>
+        <div className='fakeUserHeader'>Mock User Header</div>
+        <div className='fakeUserContent'>Mock User Content</div>
+        <div className='fakeUserPaymentSelectionBar'>
+          <button className='paymentButton mock'></button>
+          <button className='paymentButton mock'></button>
+          <button className='paymentButton apple' onClick={this.onButtonClick.bind(this)}>
+            <svg width="50" height="50" xmlns="./img/Apple_Pay_Mark_RGB_041619.svg">       
+              <image href={logo} height="50" width="50"></image>
+            </svg>
+          </button>
+        </div>
         { this.state.modalOpen ? 
           <div className='modal'>
             <div className='modal-content'>

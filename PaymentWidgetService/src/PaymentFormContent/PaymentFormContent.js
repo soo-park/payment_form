@@ -1,6 +1,7 @@
 import React from 'react';
 import { debounce } from 'lodash';
-import FormLine from '../FormLine/FormLine';
+import FormSecton from '../FormSection/FormSection';
+import { paymentInfo, address, paymentSelection } from '../_MockData/paymentMockData';
 
 class PaymentFormContent extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class PaymentFormContent extends React.Component {
   }, 100);
 
   getData(formInput) {
-    return fetch('./fakeResponse.json', new Headers({
+    return fetch('./json/fakeResponse.json', new Headers({
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -48,37 +49,17 @@ class PaymentFormContent extends React.Component {
   };
 
   render() {
-    const paymentInfo = ['First Name', 'Last Name', 'Payment Number', 'Security Code'];
-    const address = ['Line1', 'Line2', 'City', 'State', 'Zip', 'Country'];
-
     return (
       <div className='paymentForm'>
         <div className='sectionTitle'>Payment</div>
-        <div className='sectionContent'>
-          {
-            paymentInfo.map((title, i) => {
-              return <FormLine
-                key={title}
-                name={`${title.toLowerCase()}${i}`}
-                title={title}
-                handleChange={e => { e.persist(); this.handleChange(e); }}
-              />
-            })
-          }
-        </div>
-        <div className='sectionTitle'>Billing Address</div>
-          <div className='sectionContent'>
-
-            {
-              address.map((title, i) => {
-                return <FormLine
-                  key={title} 
-                  index={i} title={title}
-                  handleChange={e => { e.persist(); this.handleChange(e); }}
-                />
-              })
-            }
-          </div>
+        {
+          Object.keys(paymentSelection).map(x => 
+            <FormSecton
+              key={x}
+              {...paymentSelection[x]}
+            />
+          )
+        }
         <button className='formSubmit' onClick={this.onSubmitHander}>submit</button>
       </div>
     );

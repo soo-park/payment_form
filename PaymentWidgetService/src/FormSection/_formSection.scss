@@ -1,0 +1,24 @@
+.formSection {
+  width: 100%;
+  .formSectionTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px $base-color solid;
+    width: 100%;
+    padding: 1rem;
+    .formSectionLeft {
+      display: inherit;
+      .formSectionTitle {
+        width: 5rem;
+      }  
+    }
+  
+    .formDetail {
+      color: $link-color;
+      font-weight: 800;
+      align-self: flex-end;
+    }
+  }
+}

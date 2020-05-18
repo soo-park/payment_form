@@ -1,10 +1,10 @@
+@import './static/style/shared';
 @import './PaymentForm/paymentForm';
 @import './PaymentFormContent/paymentFormContent';
+@import './FormSection/formSection';
 @import './FormLine/formLine';
 
 body {
-  background-color: #fff;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

@@ -1,5 +1,5 @@
 .formLineInput {
-  border: lightgrey solid 2px;
+  border: $base-color solid 2px;
   color: grey;
   width: 100%;
   overflow: auto;
@@ -8,7 +8,7 @@
 // # Phone
 @media only screen and (max-width:320px) {
   .formLineTitle, .formLineInput {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .formLine {
     display: flex;
@@ -19,7 +19,7 @@
 // # Tablet
 @media only screen and (min-width:321px) and (max-width:768px) {
   .formLineTitle, .formLineInput {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .formLine {
     display: flex;
@@ -31,7 +31,7 @@
 // # Desktop
 @media only screen and (min-width:769px) {
   .formLineTitle, .formLineInput {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .formLine {
     display: flex;
