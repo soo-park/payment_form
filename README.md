@@ -64,8 +64,6 @@ Create an html page that has a div. The div is a checkout container. It will mak
 #### How to showcase the end result
   * deadline: till Monday or Tuesday quick demo
   * 5 -10 mins demo, screen shot needed
-  * email --- amuaydh@apple.com  --- to set up a meeting
-  * soo's email --- sparkstacks@gmail.com
 
 
 #### Available Scripts
