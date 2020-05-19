@@ -7,7 +7,8 @@ class FormLine extends React.Component{
   }
 
   componentDidMount() {
-    if (this.props.name === 'first name0') {
+    let name = this.props.name;
+    if ( name === 'first name0' || name === 'line10') {
       this.nameInput.focus();
     }
   }

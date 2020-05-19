@@ -19,6 +19,7 @@
 
     .invoiceItem {
       display: flex;
+      justify-content: space-between;
       padding: 0.3rem;
 
       .costType {
@@ -59,31 +60,19 @@
 // # Phone
 @media only screen and (max-width:320px) {
   .paymentForm > .sectionTitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
 // # Tablet
 @media only screen and (min-width:321px) and (max-width:768px) {
-  .paymentForm {
-    .invoice {
-      align-items: flex-end;      
-    }
-  }
-
   .paymentForm > .sectionTitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
 // # Desktop
 @media only screen and (min-width:769px) {
-  .paymentForm {
-    .invoice {
-      align-items: flex-end;      
-    }
-  }
-
   .paymentForm > .sectionTitle {
     font-size: 1rem;
   }

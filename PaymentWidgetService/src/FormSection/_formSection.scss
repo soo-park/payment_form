@@ -33,7 +33,7 @@
     }
   }
 
-  .formSectionContent {
+  .formSectionLines {
     .line1,
     .line2 {
       @include wordWrap;
@@ -48,7 +48,7 @@
 // # Phone
 @media only screen and (max-width:320px) {
   .formSection {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .formSection .formSectionTop .formSectionLeft {
     flex-direction: column;
@@ -58,7 +58,7 @@
 // # Tablet
 @media only screen and (min-width:321px) and (max-width:768px) {
   .formSection {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .formSection .formSectionTop .formSectionLeft {
     flex-direction: column;

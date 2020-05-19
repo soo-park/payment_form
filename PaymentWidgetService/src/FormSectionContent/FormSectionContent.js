@@ -13,17 +13,16 @@ class FormSectionContent extends React.Component{
     
     return (
       <div className='sectionContent'>
-        {
-          detail.map((title, i) => {
-            return <FormLine
-              key={title}
-              name={formType[title]['name'] || `${title.toLowerCase()}${i}`}
-              title={title}
-              handleChange={e => { e.persist(); handleChange(e); }}
-              formType={formType[title]['type']}
-              formWidth={formType[title]['width']}
-            />
-          })}
+        {detail.map((title, i) => {
+          return <FormLine
+            key={title}
+            name={formType[title]['name'] || `${title.toLowerCase()}${i}`}
+            title={title}
+            handleChange={e => { e.persist(); handleChange(e); }}
+            formType={formType[title]['type']}
+            formWidth={formType[title]['width']}
+          />
+        })}
       </div>
     );
   }

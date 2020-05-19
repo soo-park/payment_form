@@ -14,7 +14,6 @@ class PaymentFormContent extends React.Component {
   }
 
   handleChange = debounce((e) => {
-    // console.log(e.target.value);
     this.setState({ formInput: {
       ...this.state.formInput,
       [e.target.name]: e.target.value,
@@ -34,12 +33,12 @@ class PaymentFormContent extends React.Component {
   onSubmitHander = async e => {
     e.preventDefault();
     try {
-      // console.log('form input:', this.state.formInput);
       let data = await (await this.getData(this.state.formInput)).json();
       // may not want to clear if there is other data in localStorage
       localStorage.clear();
       // localStorage event invokes event if no CORS
       localStorage.setItem('paymentToken', data.token);
+      console.log(this.state.formInput);
       console.log('Payment successful.', localStorage.paymentToken);
       // line below will only work with CORS off on browser
       window.parent.document.getElementsByClassName('modal')[0].style.display = 'none';

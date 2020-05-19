@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
   margin: 1rem;
   background-color: $base-light;
   .formLine {
@@ -26,30 +25,33 @@
 
 // # Phone
 @media only screen and (max-width:320px) {
-
+  .sectionContent {  
+    justify-content: space-around;
+  }
 }
 
 // # Tablet
 @media only screen and (min-width:321px) and (max-width:768px) {
+  .sectionContent {  
+    justify-content: space-around;
+  }
 }
 
 // # Desktop
 @media only screen and (min-width:769px) {
-  .formLine.col-2 {
-    width: 20%;
-  }
-  .formLine.col-4 {
-    width: 40%;
-  }
-  .sectionContent {
-    .formLine.col-6 {
-      width: 60%;
-    }
-    .formLine.col-8 {
-      width: 80%;
-    }
-    .formLine.col-10 {
-      width: 100%;
+  .formLine {
+    .formLineTitle {
+      width: 200px;
     }
   }
+  .formLine.col-1 { width: 10% }
+  .formLine.col-2 { width: 20% }
+  .formLine.col-3 { width: 30% }
+  .formLine.col-4 { width: 40% }
+  .formLine.col-5 { width: 50% }
+  .formLine.col-6 { width: 60%;}
+  .formLine.col-7 { width: 70% }
+  .formLine.col-8 { width: 80%;}
+  .formLine.col-9 { width: 90%;}
+  .formLine.col-10 {width: 100%;}
 }

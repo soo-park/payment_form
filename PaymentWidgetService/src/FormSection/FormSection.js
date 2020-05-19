@@ -26,14 +26,18 @@ class FormSection extends React.Component{
     
     return (
       <div className='formSection'>
+        
+        {/* pre-selected data */}
         <div className='formSectionTop'>
+
           <div className='formSectionLeft'>
             <div className='formSectionTitle'>{title.toUpperCase()}</div>
-            <div className='formSectionContent'>
+            <div className='formSectionLines'>
               <div className='line1'>{line1}</div>
               <div className='line2'>{line2}</div>
             </div>
           </div>
+
           <div
             className={`formDetail ${this.state.detailOpen ? 'open': null}`}
             onClick={this.onClickFormDetail}
@@ -42,12 +46,12 @@ class FormSection extends React.Component{
               <image href={cheveron} height="15" width="15"></image>
             </svg>
           </div>
+
         </div>
 
+        {/* form input fields */}
         { detail && this.state.detailOpen ? (
-          <div className={`formSectionBottom ${this.state.detailOpen ? 'show' : null}`}>
-            <FormSectionContent detail={detail} handleChange={handleChange} />
-          </div>
+          <FormSectionContent detail={detail} handleChange={handleChange} />
         ) : null }
 
       </div>
