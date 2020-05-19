@@ -77,17 +77,10 @@ One-stop command to delete all build files, rebuild avoiding known bugs, and sta
 ##### `make stop-app`
 Kills application server
 
+Also, clean, build, avoid-error, and start available. See Makefile for description on each.
 
 #### Resources
-- Resources used
-  * https://coderpad.io/MZJGGEJ9
   * https://www.apple.com/apple-pay/
-
-- UX guideline
   * https://developer.apple.com/design/human-interface-guidelines/apple-pay/overview/introduction/
-
-- Request/Response doc spec
   * https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat/sending_an_apple_pay_payment_request
-
   * https://developer.apple.com/documentation/apple_pay_on_the_web/apple_pay_js_api/requesting_an_apple_pay_payment_session
-

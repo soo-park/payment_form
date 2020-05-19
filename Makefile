@@ -6,7 +6,7 @@ SPL1 := PaymentWidgetService
 
 clean:
 	@echo '==================== Clean app folder ==================='
-	cd $(SPL1) && rm -rf node_modules && rm yarn.lock
+	cd $(SPL1) && rm -rf node_modules
 
 stop-app:
 	@echo '==================== Kill server ==================='
@@ -26,5 +26,5 @@ start:
 	cd $(SPL1) && yarn start
 
 clean-start:
-	make clean && make build && make avoid-error && make start
+	make build && make avoid-error && make start
 
