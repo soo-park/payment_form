@@ -3,6 +3,7 @@ SHELL := /bin/bash
 TODAY=`date +'%y.%m.%d %H:%M:%S'`
 .PHONY: myapp-fake clean whatever all-fakes
 SPL1 := PaymentWidgetService
+SPL2 := PaymentUserSideCode
 
 clean:
 	@echo '==================== Clean app folder ==================='
@@ -28,3 +29,5 @@ start:
 clean-start:
 	make build && make avoid-error && make start
 
+cross-site-run-sample:
+	cd $(SPL2) && open checkout.html

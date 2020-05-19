@@ -84,3 +84,31 @@ Also, clean, build, avoid-error, and start available. See Makefile for descripti
   * https://developer.apple.com/design/human-interface-guidelines/apple-pay/overview/introduction/
   * https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat/sending_an_apple_pay_payment_request
   * https://developer.apple.com/documentation/apple_pay_on_the_web/apple_pay_js_api/requesting_an_apple_pay_payment_session
+
+#### Screen Shots
+* start screen
+![alt 001_start_screen](./ScreenShots/001_start_screen.png)
+
+* responsive_1_pc
+![alt 001_start_screen](./ScreenShots/002_responsive_1_pc.png)
+
+* responsive_2_tablet
+![alt 001_start_screen](./ScreenShots/002_responsive_2_tablet.png)
+
+* responsive_3_mobile
+![alt 001_start_screen](./ScreenShots/002_responsive_3_mobile.png)
+
+* on_cancel_callback_console_log
+![alt 001_start_screen](./ScreenShots/003_on_cancel_callback_console_log.png)
+
+* on_success_callback_console_log
+![alt 001_start_screen](./ScreenShots/003_on_success_callback_console_log.png)
+
+* detailed documentation_with_markdown
+![alt 001_start_screen](./ScreenShots/004_others_documentation_with_markdown.png)
+
+* makefile_to build and run with single command
+![alt 001_start_screen](./ScreenShots/004_others_makefile_for_running_with_single_command.png)
+
+* route for content only non modal service
+![alt 001_start_screen](./ScreenShots/004_others_route_for_content_only_non_modal_service.png)
